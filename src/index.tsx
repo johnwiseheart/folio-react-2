@@ -1,3 +1,5 @@
+require('es6-promise').polyfill()
+
 import * as React from 'react'
 import { render } from 'react-dom'
 
