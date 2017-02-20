@@ -14,6 +14,7 @@ export const getGistFromGithub = () : Promise<Array<IProject>> => (
             'homepage': project.homepage,
             'url': project.html_url,
             'description': project.description,
-            'updated_at': moment(project.updated_at, 'D MMM YYYY').format()
+            'updated_at': moment(project.updated_at, 'D MMM YYYY').format(),
+            'maintained': project.maintained
         })))
 )

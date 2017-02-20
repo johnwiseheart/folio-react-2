@@ -4,7 +4,8 @@ interface IProject {
     homepage: string,
     url: string
     description: string,
-    updated_at: string
+    updated_at: string,
+    maintained: boolean
 }
 
 interface ProjectListState {

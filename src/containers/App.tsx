@@ -18,7 +18,6 @@ export default class App extends React.Component<{}, undefined> {
 				<h1>John Wiseheart</h1>
 				<p>{description}</p>
 
-				<h2>Projects</h2>
 				<ProjectList />
 
 				<h2>Contact Me</h2>

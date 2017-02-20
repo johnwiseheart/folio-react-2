@@ -15,6 +15,17 @@ const sortProjects = (a, b) => {
     return 0
 }
 
+const style = {
+    inlineTitle: {
+        display: 'inline-block'
+    },
+    subtitle: {
+        display: 'inline-block',
+        color: '#bbb',
+        paddingLeft: 10
+    }
+}
+
 export class ProjectList extends React.Component<{}, ProjectListState> {
     state = { projects: [], loading: true }
 
@@ -33,11 +44,19 @@ export class ProjectList extends React.Component<{}, ProjectListState> {
     render() : JSX.Element {
         return (
             <div>
-            {!this.state.loading ? <div style={{display: 'flex'}}>
-                <div>
-                    {this.state.projects.map(this.renderProject)}
-                </div>
-            </div> : <div>Loading...</div>}
+                <h2>Personal Projects</h2>
+                {!this.state.loading 
+                    ? <div>
+                        {this.state.projects.filter(project => project.maintained === true || !project.hasOwnProperty('maintained')).map(this.renderProject)}
+                      </div>
+                    : <div>Loading...</div>}
+                <h2 style={style.inlineTitle}>Other Projects</h2>
+                <p style={style.subtitle}>Unmaintained, group or orphaned projects</p>
+                {!this.state.loading 
+                    ? <div>
+                        {this.state.projects.filter(project => project.maintained === false).map(this.renderProject)}
+                      </div>
+                    : <div>Loading...</div>}
             </div>
         )
     }
