@@ -3,18 +3,14 @@ import React from 'react'
 import { ProjectList } from './ProjectList'
 import {config, configType, } from '../../config'
 
-const style = { body: {
-	fontFamily: 'monospace',
-	padding: '20px 50px', 
-	maxWidth: 720
-}}
+import '../styles/styles.css'
 
 export default class App extends React.Component<{}, undefined> {
 	render(): JSX.Element {
 		const { description, contact } : configType = config
 
 		return (
-			<div style={style.body}>
+			<div>
 				<h1>John Wiseheart</h1>
 				<p>{description}</p>
 
