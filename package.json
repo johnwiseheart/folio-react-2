@@ -4,7 +4,7 @@
   "description": "A simple template for Typescript + React + Webpack + Babel",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.prod.config.js",
     "start": "node server.js"
   },
   "author": "Tom Duncalf",
@@ -29,6 +29,7 @@
   "dependencies": {
     "moment": "^2.17.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "whatwg-fetch": "^2.0.2"
   }
 }
