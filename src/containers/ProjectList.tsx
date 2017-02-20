@@ -17,12 +17,12 @@ const sortProjects = (a, b) => {
 
 const style = {
     inlineTitle: {
-        display: 'inline-block'
+        display: 'inline-block',
+        paddingRight: 5
     },
     subtitle: {
         display: 'inline-block',
-        color: '#bbb',
-        paddingLeft: 10
+        color: '#bbb'
     }
 }
 
@@ -51,7 +51,7 @@ export class ProjectList extends React.Component<{}, ProjectListState> {
                       </div>
                     : <div>Loading...</div>}
                 <h2 style={style.inlineTitle}>Other Projects</h2>
-                <p style={style.subtitle}>Unmaintained, group or orphaned projects</p>
+                <p className="subtitle" style={style.subtitle}>Unmaintained, group or orphaned projects</p>
                 {!this.state.loading 
                     ? <div>
                         {this.state.projects.filter(project => project.maintained === false).map(this.renderProject)}

@@ -19,7 +19,8 @@ module.exports = {
   module: {
     loaders: [
       // .ts(x) files should first pass through the Typescript loader, and then through babel
-      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'] }
+      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'] },
+      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] }
     ]
   },
   plugins: [
