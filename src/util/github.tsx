@@ -1,5 +1,7 @@
 /// <reference path="../interfaces.d.ts"/>
 
+import 'whatwg-fetch'
+
 import { config } from '../../config'
 
 export const getRepoListFromGithub = () : Promise<Array<IProject>> => (

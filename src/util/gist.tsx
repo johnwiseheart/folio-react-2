@@ -1,6 +1,7 @@
 /// <reference path="../interfaces.d.ts"/>
 
 import moment from 'moment'
+import 'whatwg-fetch'
 
 import { config } from '../../config'
 
